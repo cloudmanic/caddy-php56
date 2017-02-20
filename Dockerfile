@@ -29,8 +29,8 @@ EXPOSE 8080
 
 # Ensure www-data user exists
 RUN set -x \
-	&& addgroup -g 82 -S www-data \
-	&& adduser -u 82 -D -S -G www-data www-data
+	&& addgroup -g 33 -S www-data \
+	&& adduser -u 33 -D -S -G www-data www-data
 
 # Workint directory
 WORKDIR /www
