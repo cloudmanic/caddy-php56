@@ -32,8 +32,10 @@ RUN set -x \
   && deluser xfs \
   && addgroup -g 2000 -S xfs \
   && adduser -u 2000 -D -S -G xfs xfs \
-	&& addgroup -g 33 -S www-data \
-	&& adduser -u 33 -D -S -G www-data www-data
+  && addgroup -g 33 -S www-data \
+  && adduser -u 33 -D -S -G www-data www-data \
+  && addgroup -g 1001 -S deploy \
+  && adduser -u 1001 -D -S -G deploy deploy
 
 # Workint directory
 WORKDIR /www
