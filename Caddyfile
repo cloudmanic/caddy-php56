@@ -1,0 +1,19 @@
+0.0.0.0:8080
+
+root /www/public
+
+browse
+
+fastcgi / 127.0.0.1:9000 php {
+  index index.php
+}
+
+startup php-fpm5
+
+log /logs/caddy.log
+
+errors /logs/caddy.error.log
+
+rewrite {
+  to {path} {path}/ /index.php?{query}
+}
