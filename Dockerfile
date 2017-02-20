@@ -41,6 +41,7 @@ WORKDIR /www
 # Copy over default files
 COPY Caddyfile /etc/Caddyfile
 COPY index.php /www/public/index.php
+COPY php.ini /etc/php5/php.ini
 COPY php-fpm.conf /etc/php5/php-fpm.conf
 
 # Set perms for document root.
